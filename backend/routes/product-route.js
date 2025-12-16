@@ -96,6 +96,7 @@ router.get('/', async (req, res, next) => {
   //     },
   //   ]);
 
+  // mongodb+srv://aninakwahdesmond3_db_user:<db_password>@cluster0.ypti1pb.mongodb.net/?appName=Cluster0
   res.status(200).json({
     products,
     pageNumber,

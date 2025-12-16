@@ -6,7 +6,8 @@ module.exports = async function () {
     mongoose
       // .connect('mongodb://localhost/proshop')
       .connect(
-        'mongodb+srv://aninakwahdesmond3_db_user:mista334@cluster0.odjki9w.mongodb.net/?appName=Cluster0'
+        // 'mongodb+srv://aninakwahdesmond3_db_user:mista334@cluster0.odjki9w.mongodb.net/?appName=Cluster0'
+        'mongodb+srv://aninakwahdesmond3_db_user:mista334@cluster0.ypti1pb.mongodb.net/?appName=proshop'
       )
       .then(() => {
         if (process.env.NODE_ENV === 'development') {
