@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./backend/app.js",
+    "start": "node ./backend/app.js",
     "data:import": "node backend/seeded.js",
     "data:delete": "node ./backend/seeded.js -d ",
     "build": "npm install && npm install --prefix Shopify && npm run build --prefix Shopify"
@@ -21,7 +22,6 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "express-async-errors": "^3.1.1",
     "joi": "^18.0.2",
     "joi-password-complexity": "^5.2.0",
     "jsonwebtoken": "^9.0.2",
