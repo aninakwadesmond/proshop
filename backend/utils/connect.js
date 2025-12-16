@@ -10,9 +10,7 @@ module.exports = async function () {
         'mongodb+srv://aninakwahdesmond3_db_user:mista334@cluster0.ypti1pb.mongodb.net/?appName=proshop'
       )
       .then(() => {
-        if (process.env.NODE_ENV === 'development') {
-          importData();
-        }
+        importData();
 
         console.log('Connected to the db ');
       })
