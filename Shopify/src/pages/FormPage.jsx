@@ -12,7 +12,7 @@ export async function action({ request, params }) {
   console.log(credetials);
 
   const { data } = await axios.post(
-    'http://localhost:5000/user/login',
+    'https://proshopy-i2wk.onrender.com/user/login',
     credetials,
     {
       withCredentials: true,

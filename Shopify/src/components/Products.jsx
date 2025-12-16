@@ -39,7 +39,7 @@ function Products({ products: data }) {
         <div className="w-full text-center text-sm my-5 text-gray-500 capitalize">
           &copy; Proshop 2025
         </div>
-        {/* <img src="http://localhost:5000/Uploads\cap.png" alt="image" /> */}
+        {/* <img src="https://proshopy-i2wk.onrender.com/Uploads\cap.png" alt="image" /> */}
       </div>
     </div>
   );
@@ -82,7 +82,7 @@ function Cart({ card }) {
       {!upload ? (
         <img src={image} alt="no Image found" className="w-full " />
       ) : (
-        <img src={`http://localhost:5000${image}`} alt="image" />
+        <img src={`https://proshopy-i2wk.onrender.com${image}`} alt="image" />
       )}
 
       <h2 className="font-bold text-sm line-clamp-1 text-zinc-600">{name}</h2>

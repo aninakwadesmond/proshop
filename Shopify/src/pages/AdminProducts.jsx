@@ -28,7 +28,7 @@ function AdminProducts() {
 
   // useEffect(() => {
   //   async function handleProducts() {
-  //     const { data } = await axios.get('http://localhost:5000/proshop', {
+  //     const { data } = await axios.get('https://proshopy-i2wk.onrender.com/proshop', {
   //       withCredentials: true,
   //     });
   //     // console.log('backend', data);
@@ -59,7 +59,7 @@ function AdminProducts() {
 
   async function handleNewProducts() {
     const { data } = await axios.post(
-      'http://localhost:5000/proshop',
+      'https://proshopy-i2wk.onrender.com/proshop',
       {},
       { withCredentials: true }
     );
@@ -119,7 +119,7 @@ function ProductData({ product, setData }) {
 
   async function handleRemoveProduct() {
     const { data } = await axios.delete(
-      `http://localhost:5000/proshop/delete/${id}`,
+      `https://proshopy-i2wk.onrender.com/proshop/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -158,9 +158,12 @@ function ProductData({ product, setData }) {
 }
 
 export async function Loader() {
-  const { data } = await axios.get('http://localhost:5000/proshop', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/proshop',
+    {
+      withCredentials: true,
+    }
+  );
   if (!data) return json({ message: 'Data not found ', status: 400 });
   console.log('data available', data);
 

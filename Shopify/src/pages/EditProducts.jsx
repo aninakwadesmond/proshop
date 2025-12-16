@@ -16,7 +16,7 @@ function EditProducts() {
     formData.append('image', e.target.files[0]);
     try {
       const { data } = await axios.post(
-        'http://localhost:5000/upload',
+        'https://proshopy-i2wk.onrender.com/upload',
         formData,
         {
           withCredentials: true,
@@ -144,7 +144,7 @@ export async function action({ request, params }) {
   //   request.url.split('/')[4]
   // );
   const { data } = await axios.put(
-    `http://localhost:5000/proshop/${request.url.split('/')[4]}`,
+    `https://proshopy-i2wk.onrender.com/proshop/${request.url.split('/')[4]}`,
     response,
     {
       withCredentials: true,

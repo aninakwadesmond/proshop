@@ -14,9 +14,13 @@ export async function action({ request, params }) {
   const dataInput = await request.formData();
   const events = Object.fromEntries(dataInput.entries());
 
-  const { data } = await axios.post('http://localhost:5000/user', events, {
-    withCredentials: true,
-  });
+  const { data } = await axios.post(
+    'https://proshopy-i2wk.onrender.com/user',
+    events,
+    {
+      withCredentials: true,
+    }
+  );
   console.log(data);
   return data;
 }

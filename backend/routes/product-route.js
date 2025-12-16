@@ -225,7 +225,7 @@ router.post('/reviews/:id', authLogin, authAdmin, async (req, res) => {
   const saveREview = await product.save();
   console.log('your new review ', saveREview);
 
-  // const { data } = axios.get('http://localhost:5000/proshop', {
+  // const { data } = axios.get('https://proshopy-i2wk.onrender.com/proshop', {
   //   withCredentials: true,
   // });
   // await Products.findById()

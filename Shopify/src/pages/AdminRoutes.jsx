@@ -18,9 +18,12 @@ function AdminRoutes() {
 }
 
 export async function Loader() {
-  const { data } = await axios.get('http://localhost:5000/proshop', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/proshop',
+    {
+      withCredentials: true,
+    }
+  );
   if (!data) return json({ message: 'No data available', status: '403' });
 
   // console.log('action data ', data);

@@ -100,7 +100,7 @@ function EachCart({ cart }) {
           />
         ) : (
           <img
-            src={`http://localhost:5000${image}`}
+            src={`https://proshopy-i2wk.onrender.com${image}`}
             alt="image"
             className="max-w-[3.5rem]  sm:max-w-[5rem] rounded-md shadow-lg shadow-gray-400/20 hover:scale-105 duration-500 cursor-pointer"
           />

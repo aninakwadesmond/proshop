@@ -148,9 +148,12 @@ function TableRow({ eachOrder }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   async function handleViewSelectedOrder() {
-    const { data } = await axios.get(`http://localhost:5000/order/get/${id}`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.get(
+      `https://proshopy-i2wk.onrender.com/order/get/${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     console.log('currentData', data);
     dispatch(setOrders(data));
     navigate(`/shipping/placeOrder/order/${id}`);
@@ -181,18 +184,24 @@ function TableRow({ eachOrder }) {
 }
 
 async function LoadUser() {
-  const { data } = await axios.get('http://localhost:5000/user/me', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/user/me',
+    {
+      withCredentials: true,
+    }
+  );
   if (!data) return json({ message: 'Error data ', status: 400 });
 
   return data;
 }
 
 async function LoadOrders() {
-  const { data } = await axios.get('http://localhost:5000/order/all', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/order/all',
+    {
+      withCredentials: true,
+    }
+  );
   if (!data) return json({ message: 'Error data ', status: 400 });
   console.log('all data', data);
   return data;
@@ -212,9 +221,13 @@ export async function action({ request, params }) {
   if (events.password !== events.confirmPassword)
     return toast.error('Password does not match ');
 
-  const { data } = await axios.put('http://localhost:5000/user/me', events, {
-    withCredentials: true,
-  });
+  const { data } = await axios.put(
+    'https://proshopy-i2wk.onrender.com/user/me',
+    events,
+    {
+      withCredentials: true,
+    }
+  );
   if (!data) return toast.error('Profile not updated');
   toast.success('Profile updated');
   return data;

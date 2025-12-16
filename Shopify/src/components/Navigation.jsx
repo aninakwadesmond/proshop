@@ -44,7 +44,7 @@ function Navigation() {
     console.log('statrt p2');
     async function logout() {
       console.log(' p3');
-      await axios.get('http://localhost:5000/user/logout', {
+      await axios.get('https://proshopy-i2wk.onrender.com/user/logout', {
         withCredentials: true,
       });
       dispatch(setUserInfo(null));

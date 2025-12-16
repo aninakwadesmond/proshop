@@ -55,7 +55,7 @@ async function loadProducts({ request, params }) {
   // console.log('keyword params', params);
 
   const { data } = await axios.get(
-    `http://localhost:5000/proshop?${id && `page=${id}`}&${
+    `https://proshopy-i2wk.onrender.com/proshop?${id && `page=${id}`}&${
       keyword && `keyword=${keyword}`
     }`,
     {
@@ -70,9 +70,12 @@ async function loadTopRating({ request, params }) {
   // const { id, keyword } = params;
   console.log('keyword params', params);
 
-  const { data } = await axios.get(`http://localhost:5000/proshop/top`, {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    `https://proshopy-i2wk.onrender.com/proshop/top`,
+    {
+      withCredentials: true,
+    }
+  );
 
   // console.log('your data ', data);
   return data;

@@ -38,9 +38,12 @@ function Users() {
 
   useEffect(() => {
     async function handleProducts() {
-      const { data } = await axios.get('http://localhost:5000/user/all', {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        'https://proshopy-i2wk.onrender.com/user/all',
+        {
+          withCredentials: true,
+        }
+      );
 
       // dispatch(getProduct(data));
       dispatch(getAlluser(data));
@@ -68,7 +71,7 @@ function Users() {
 
   async function handleNewProducts() {
     const { data } = await axios.post(
-      'http://localhost:5000/proshop',
+      'https://proshopy-i2wk.onrender.com/proshop',
       {},
       { withCredentials: true }
     );
@@ -127,9 +130,12 @@ function ProductData({ product, setData }) {
   }
 
   async function handleRemoveProduct() {
-    const { data } = await axios.delete(`http://localhost:5000/user/${id}`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.delete(
+      `https://proshopy-i2wk.onrender.com/user/${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     console.log('remove data ', data);
     if (data.status === 400 || data.status === 301)
       return toast.error(data.message);
@@ -178,9 +184,12 @@ function ProductData({ product, setData }) {
 }
 
 export async function Loader() {
-  const { data } = await axios.get('http://localhost:5000/user/all', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/user/all',
+    {
+      withCredentials: true,
+    }
+  );
 
   // console.log('user reader from bakcend', data);
   if (!data) return json({ message: 'Failed to load Users', status: 400 });

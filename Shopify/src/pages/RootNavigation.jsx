@@ -12,7 +12,7 @@ function RootNavigation() {
 }
 
 // export async function action({ request, params }) {
-//   await axios.get('http://localhost:5000/user/logout');
+//   await axios.get('https://proshopy-i2wk.onrender.com/user/logout');
 // }
 
 export default RootNavigation;

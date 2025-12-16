@@ -47,9 +47,12 @@ function Orders({ order }) {
   const navigate = useNavigate();
 
   async function handleDetails() {
-    const { data } = await axios.get(`http://localhost:5000/order/get/${id}`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.get(
+      `https://proshopy-i2wk.onrender.com/order/get/${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     console.log(data);
     dispatch(setOrders(data));
     navigate(`/shipping/placeOrder/order/${id}`);
@@ -87,9 +90,12 @@ function Orders({ order }) {
 }
 
 export async function Loader({ request, params }) {
-  const { data } = await axios.get('http://localhost:5000/order/all', {
-    withCredentials: true,
-  });
+  const { data } = await axios.get(
+    'https://proshopy-i2wk.onrender.com/order/all',
+    {
+      withCredentials: true,
+    }
+  );
 
   if (!data) return json({ message: 'No orders Found' });
 

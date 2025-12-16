@@ -164,7 +164,7 @@ function Cart({ cart }) {
           />
         ) : (
           <img
-            src={`http://localhost:5000${image}`}
+            src={`https://proshopy-i2wk.onrender.com${image}`}
             alt="image"
             className="w-[4rem] shadow-md shadow-gray-950/10"
           />
