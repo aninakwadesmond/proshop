@@ -21,10 +21,11 @@ async function importData() {
 
     await Products.insertMany(productsContent);
     console.log('products added');
-    process.exit();
+
+    if (require.main === module) process.exit();
   } catch (error) {
     console.log('Failed to add data', error.message);
-    process.exit(1);
+    if (require.main === module) process.exit(1);
   }
 }
 
@@ -39,10 +40,17 @@ async function removeAllData() {
   }
 }
 
-if (process.argv[2] === '-d') {
-  removeAllData();
-} else {
-  importData();
+if (require.main === module) {
+  if (process.argv[2] === '-d') {
+    removeAllData();
+  } else {
+    importData();
+  }
 }
+// if (process.argv[2] === '-d') {
+//   removeAllData();
+// } else {
+//   importData();
+// }
 
 module.exports = { importData };
