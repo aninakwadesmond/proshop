@@ -48,7 +48,7 @@ function Orders({ order }) {
 
   async function handleDetails() {
     const { data } = await axios.get(
-      `https://proshopy-i2wk.onrender.com/order/get/${id}`,
+      `https://proshop-8-4qyi.onrender.com/order/get/${id}`,
       {
         withCredentials: true,
       }
@@ -91,7 +91,7 @@ function Orders({ order }) {
 
 export async function Loader({ request, params }) {
   const { data } = await axios.get(
-    'https://proshopy-i2wk.onrender.com/order/all',
+    'https://proshop-8-4qyi.onrender.com/order/all',
     {
       withCredentials: true,
     }

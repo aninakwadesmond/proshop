@@ -99,7 +99,7 @@ function SwipeComponent({ topRating: products }) {
                     />
                   ) : (
                     <img
-                      src={`https://proshopy-i2wk.onrender.com${image}`}
+                      src={`https://proshop-8-4qyi.onrender.com${image}`}
                       alt="image"
                       className="w-full h-full sm:clip sm:w-[70%]"
                     />

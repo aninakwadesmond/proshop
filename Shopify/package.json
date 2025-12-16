@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://proshopy-i2wk.onrender.com",
+  "proxy": "https://proshop-8-4qyi.onrender.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

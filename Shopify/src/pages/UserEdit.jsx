@@ -15,7 +15,7 @@ function UserEdit() {
   //   formData.append('image', e.target.files[0]);
   //   try {
   //     const { data } = await axios.post(
-  //       'https://proshopy-i2wk.onrender.com/upload',
+  //       'https://proshop-8-4qyi.onrender.com/upload',
   //       formData,
   //       {
   //         withCredentials: true,
@@ -130,7 +130,7 @@ export async function action({ request, params }) {
   console.log('response', response, request.url.split('/')[4]);
 
   const { data } = await axios.put(
-    `https://proshopy-i2wk.onrender.com/user/${request.url.split('/')[4]}`,
+    `https://proshop-8-4qyi.onrender.com/user/${request.url.split('/')[4]}`,
     response,
     {
       withCredentials: true,

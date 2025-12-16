@@ -39,7 +39,7 @@ function Oder() {
   const navigate = useNavigate();
   useEffect(() => {
     // async function getOrder() {
-    //   const { data } = await axios.get(`https://proshopy-i2wk.onrender.com/order/${id}`);
+    //   const { data } = await axios.get(`https://proshop-8-4qyi.onrender.com/order/${id}`);
     //   dispatch(setOrderStorage(data));
     //   console.log('data', data);
     // }
@@ -48,7 +48,7 @@ function Oder() {
     if (!ref) return;
 
     axios
-      .get(`https://proshopy-i2wk.onrender.com/order/verify?reference=${ref}`)
+      .get(`https://proshop-8-4qyi.onrender.com/order/verify?reference=${ref}`)
       .then((res) => {
         console.log('return back', res.data, res.data.data);
 
@@ -64,7 +64,7 @@ function Oder() {
     const callbackUrl = `${window.location.origin}/shipping/placeOrder/order/${id}`;
     console.log('start pay 1.5', callbackUrl);
     const { data } = await axios.post(
-      `https://proshopy-i2wk.onrender.com/order/${id}/pay`,
+      `https://proshop-8-4qyi.onrender.com/order/${id}/pay`,
       {
         userEmail: user?.email || userInfo?.email,
         totalPrice,
@@ -79,7 +79,7 @@ function Oder() {
 
   async function handleDelivered() {
     const { data } = await axios.put(
-      `https://proshopy-i2wk.onrender.com/order/${id}/delivered`,
+      `https://proshop-8-4qyi.onrender.com/order/${id}/delivered`,
       { isDeliverd: true },
 
       { withCredentials: true }
@@ -250,7 +250,7 @@ function EachOrder({ order }) {
           />
         ) : (
           <img
-            src={`https://proshopy-i2wk.onrender.com${image}`}
+            src={`https://proshop-8-4qyi.onrender.com${image}`}
             alt="image"
             className="w-[3.5rem] shadow-lg shadow-gray-950/20 rounded-md"
           />

@@ -51,7 +51,7 @@ export async function action({ request, params }) {
   );
 
   const { data } = await axios.post(
-    'https://proshopy-i2wk.onrender.com/order',
+    'https://proshop-8-4qyi.onrender.com/order',
     {
       orderItems,
       shippingaddress,

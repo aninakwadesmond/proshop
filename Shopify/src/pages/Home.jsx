@@ -55,7 +55,7 @@ async function loadProducts({ request, params }) {
   // console.log('keyword params', params);
 
   const { data } = await axios.get(
-    `https://proshopy-i2wk.onrender.com/proshop?${id && `page=${id}`}&${
+    `https://proshop-8-4qyi.onrender.com/proshop?${id && `page=${id}`}&${
       keyword && `keyword=${keyword}`
     }`,
     {
@@ -63,7 +63,7 @@ async function loadProducts({ request, params }) {
     }
   );
 
-  console.log('your data ', data);
+  console.log('your data from server ', data);
   return data;
 }
 async function loadTopRating({ request, params }) {
@@ -71,19 +71,19 @@ async function loadTopRating({ request, params }) {
   console.log('keyword params', params);
 
   const { data } = await axios.get(
-    `https://proshopy-i2wk.onrender.com/proshop/top`,
+    `https://proshop-8-4qyi.onrender.com/proshop/top`,
     {
       withCredentials: true,
     }
   );
 
-  // console.log('your data ', data);
+  console.log('your data from server rating  ', data);
   return data;
 }
 export async function loader(args) {
   return defer({
     products: await loadProducts(args),
-    topRating: loadTopRating(args),
+    topRating: await loadTopRating(args),
   });
 }
 

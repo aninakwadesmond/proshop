@@ -28,7 +28,7 @@ function AdminProducts() {
 
   // useEffect(() => {
   //   async function handleProducts() {
-  //     const { data } = await axios.get('https://proshopy-i2wk.onrender.com/proshop', {
+  //     const { data } = await axios.get('https://proshop-8-4qyi.onrender.com/proshop', {
   //       withCredentials: true,
   //     });
   //     // console.log('backend', data);
@@ -59,7 +59,7 @@ function AdminProducts() {
 
   async function handleNewProducts() {
     const { data } = await axios.post(
-      'https://proshopy-i2wk.onrender.com/proshop',
+      'https://proshop-8-4qyi.onrender.com/proshop',
       {},
       { withCredentials: true }
     );
@@ -119,7 +119,7 @@ function ProductData({ product, setData }) {
 
   async function handleRemoveProduct() {
     const { data } = await axios.delete(
-      `https://proshopy-i2wk.onrender.com/proshop/delete/${id}`,
+      `https://proshop-8-4qyi.onrender.com/proshop/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -159,7 +159,7 @@ function ProductData({ product, setData }) {
 
 export async function Loader() {
   const { data } = await axios.get(
-    'https://proshopy-i2wk.onrender.com/proshop',
+    'https://proshop-8-4qyi.onrender.com/proshop',
     {
       withCredentials: true,
     }

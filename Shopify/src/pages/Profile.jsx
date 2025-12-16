@@ -149,7 +149,7 @@ function TableRow({ eachOrder }) {
   const dispatch = useDispatch();
   async function handleViewSelectedOrder() {
     const { data } = await axios.get(
-      `https://proshopy-i2wk.onrender.com/order/get/${id}`,
+      `https://proshop-8-4qyi.onrender.com/order/get/${id}`,
       {
         withCredentials: true,
       }
@@ -185,7 +185,7 @@ function TableRow({ eachOrder }) {
 
 async function LoadUser() {
   const { data } = await axios.get(
-    'https://proshopy-i2wk.onrender.com/user/me',
+    'https://proshop-8-4qyi.onrender.com/user/me',
     {
       withCredentials: true,
     }
@@ -197,7 +197,7 @@ async function LoadUser() {
 
 async function LoadOrders() {
   const { data } = await axios.get(
-    'https://proshopy-i2wk.onrender.com/order/all',
+    'https://proshop-8-4qyi.onrender.com/order/all',
     {
       withCredentials: true,
     }
@@ -222,7 +222,7 @@ export async function action({ request, params }) {
     return toast.error('Password does not match ');
 
   const { data } = await axios.put(
-    'https://proshopy-i2wk.onrender.com/user/me',
+    'https://proshop-8-4qyi.onrender.com/user/me',
     events,
     {
       withCredentials: true,

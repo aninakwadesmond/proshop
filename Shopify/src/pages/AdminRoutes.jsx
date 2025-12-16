@@ -19,7 +19,7 @@ function AdminRoutes() {
 
 export async function Loader() {
   const { data } = await axios.get(
-    'https://proshopy-i2wk.onrender.com/proshop',
+    'https://proshop-8-4qyi.onrender.com/proshop',
     {
       withCredentials: true,
     }

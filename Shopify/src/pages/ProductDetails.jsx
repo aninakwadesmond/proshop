@@ -78,7 +78,7 @@ function ProductDetails() {
                 />
               ) : (
                 <img
-                  src={`https://proshopy-i2wk.onrender.com${image}`}
+                  src={`https://proshop-8-4qyi.onrender.com${image}`}
                   alt="image"
                   className="h-full hover:scale-102 duration-500 cursor-pointer rounded-md"
                 />
@@ -263,7 +263,7 @@ export async function action({ request, params }) {
 
   try {
     const { data } = await axios.post(
-      `https://proshopy-i2wk.onrender.com/proshop/reviews/${id}`,
+      `https://proshop-8-4qyi.onrender.com/proshop/reviews/${id}`,
       response,
       {
         withCredentials: true,
