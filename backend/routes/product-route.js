@@ -5,7 +5,7 @@ const { authLogin, authAdmin } = require('../auth/authUser');
 const { User } = require('../models/user-model');
 const router = Router();
 
-router.get('/', authLogin, authAdmin, async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   const pageSize = 8;
   const pageNumber = Number(req.query.page) || 1;
 
