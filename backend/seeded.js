@@ -5,7 +5,7 @@ const Products = require('./models/products-model');
 const { User } = require('./models/user-model');
 
 //connect to mongoose
-require('../backend/utils/connect')();
+// require('../backend/utils/connect')();
 
 async function importData() {
   try {
@@ -44,3 +44,5 @@ if (process.argv[2] === '-d') {
 } else {
   importData();
 }
+
+module.exports = { importData };

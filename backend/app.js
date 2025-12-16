@@ -26,6 +26,8 @@ const port = process.env.PORT || 5000;
 
 //connect to mongoose
 require('../backend/utils/connect')();
+//prod
+require('../backend/utils/prod.js')(app);
 
 app.use('/proshop', router);
 app.use('/user', userRoute);
@@ -42,9 +44,12 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/Shopify/build')));
 
   //resirect any false app to the root index
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'Shopify', 'build', 'index.html'))
-  );
+  // app.get('*', (req, res) =>
+  //   res.sendFile(path.resolve(__dirname, 'Shopify', 'build', 'index.html'))
+  // );
+  app.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../Shopify/dist/index.html'));
+  });
 }
 
 app.use(error);
