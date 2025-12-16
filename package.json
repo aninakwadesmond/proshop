@@ -1,0 +1,36 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./backend/app.js",
+    "data:import": "node backend/seeded.js",
+    "data:delete": "node ./backend/seeded.js -d ",
+    "build": "npm install && npm install --prefix Shopify && npm run build --prefix Shopify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
+    "config": "^4.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-async-errors": "^3.1.1",
+    "joi": "^18.0.2",
+    "joi-password-complexity": "^5.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodah": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.20.1",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

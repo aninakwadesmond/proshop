@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    @apply w-screen overflow-x-hidden;
+  }
+}
+
+.clip {
+  /* clip-path: polygon(0 0, 76% 0, 58% 100%, 0% 100%); */
+  /* clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%); */
+  /* clip-path: polygon(0 0, 72% 0, 61% 100%, 0% 100%); */
+  clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%);
+}

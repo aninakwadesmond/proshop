@@ -1,0 +1,26 @@
+@layer components {
+  /* Force pagination to be horizontal */
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* spacing between bullets */
+  }
+
+  /* Size of bullets */
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    opacity: 1; /* override Swiper default */
+    transition: 0.3s ease;
+    border-radius: 50%; /* circle (default) */
+  }
+
+  /* Active bullet */
+  .swiper-pagination-bullet-active {
+    background: #007bff;
+    width: 20px; /* active bullet becomes longer horizontally */
+    border-radius: 10px;
+  }
+}
