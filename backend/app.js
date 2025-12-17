@@ -16,6 +16,12 @@ const ImageRoute = require('./routes/Uploade-route.js');
 const app = express();
 
 app.use(express.json());
+app.use(cookieParser());
+
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+  next();
+});
 
 // app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 const allowedOrigins = [
@@ -41,14 +47,8 @@ app.use(
 
 // { origin: '/http://localhost:5173', credentials: true }
 
-app.use(cookieParser());
 const port = process.env.PORT || 5000;
 // const port = 6000;
-
-app.use((req, res, next) => {
-  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
-  next();
-});
 
 //connect to mongoose
 require('../backend/utils/connect')();
