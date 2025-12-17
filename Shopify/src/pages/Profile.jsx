@@ -20,7 +20,7 @@ function Profile() {
   const { user, order } = useLoaderData();
   const response = useActionData();
   const dispatch = useDispatch();
-  const { name, email } = data;
+  // const { name, email } = user;
 
   useEffect(() => {
     if (!response) return;
