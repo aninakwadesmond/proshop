@@ -4,15 +4,15 @@ const jwt = require('jsonwebtoken');
 
 function authLogin(req, res, next) {
   const token = req.cookies?.jwt;
-  console.log('token', token);
+  console.log(req.cookies.jwt);
+
   if (!token)
-    res
+    return res
       .status(403)
       .json({ message: 'UnAuthorized user.Invalid token!', status: 'failed' });
 
   try {
     const decode = jwt.decode(token, config.get('jwtKey'));
-
     res.user = decode;
     console.log(res.user);
     next();
