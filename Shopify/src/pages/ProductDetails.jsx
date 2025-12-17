@@ -1,7 +1,7 @@
 import { faStar, faStarHalf, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Link, useActionData } from 'react-router-dom';
+import { Form, json, Link, useActionData } from 'react-router-dom';
 import { addToChart } from '../stores/Feautures/CartSlice';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -276,6 +276,7 @@ export async function action({ request, params }) {
       console.log(error.response, error.response.data);
     }
     toast.error(error.response.data.message);
+    throw response(JSON.stringify({ message: 'Error info', status: 300 }));
   }
 }
 
