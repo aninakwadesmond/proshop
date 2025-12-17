@@ -192,6 +192,7 @@ async function LoadUser() {
   );
   if (!data) return json({ message: 'Error data ', status: 400 });
 
+  console.log('user data', data);
   return data;
 }
 
