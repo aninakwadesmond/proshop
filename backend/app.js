@@ -18,10 +18,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use((req, res, next) => {
-  res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
+//   next();
+// });
 
 // app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 const allowedOrigins = [
