@@ -190,9 +190,9 @@ async function LoadUser() {
       withCredentials: true,
     }
   );
+  console.log('user data', data);
   if (!data) return json({ message: 'Error data ', status: 400 });
 
-  console.log('user data', data);
   return data;
 }
 
@@ -209,8 +209,8 @@ async function LoadOrders() {
 }
 export async function Loader({ request, params }) {
   return defer({
-    user: await LoadUser(),
-    order: await LoadOrders(),
+    user: LoadUser(),
+    order: LoadOrders(),
   });
 }
 
