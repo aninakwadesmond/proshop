@@ -55,11 +55,14 @@ app.use('/user', userRoute);
 app.use('/order', orderRouter);
 app.use('/upload', ImageRoute);
 
-const root = __dirname.split('\\').splice(0, 4).join('\\');
-// console.log(__dirname, 'your dirname', path.join(root, '/Uploads'));
-// console.log(__dirname.split('\\').splice(0, 4).join('\\'));
-// const __dirname = path.resolve();
-app.use('/Uploads', express.static(path.join(root, '/Uploads')));
+// const root = __dirname.split('\\').splice(0, 4).join('\\');
+// // console.log(__dirname, 'your dirname', path.join(root, '/Uploads'));
+// // console.log(__dirname.split('\\').splice(0, 4).join('\\'));
+// // const __dirname = path.resolve();
+// app.use('/Uploads', express.static(path.join(root, '/Uploads')));
+
+const uploadsPath = path.join(__dirname, '..', 'Uploads');
+app.use('/Uploads', express.static(uploadsPath));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/Shopify/build')));

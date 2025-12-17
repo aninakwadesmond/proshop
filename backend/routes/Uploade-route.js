@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) =>
     cb(
       null,
-      `/${file.fieldname}-${Date.now()}-${path.extname(file.originalname)}`
+      `${file.fieldname}-${Date.now()}-${path.extname(file.originalname)}`
     ),
 });
 
@@ -30,8 +30,11 @@ const upload = multer({
 });
 
 ImageRoute.post('/', upload.single('image'), (req, res, next) => {
-  console.log('image', `/${req.file.path}`);
-  res.json({ message: 'Image Uploaded', image: `/${req.file.path}` });
+  const imagePath = `/Uploads/${req.file.filename}`;
+  res.json({ message: 'Image Uploaded', image: imagePath });
+
+  // console.log('image', `/${req.file.path}`);
+  // res.json({ message: 'Image Uploaded', image: `/${req.file.path}` });
 });
 
 module.exports = ImageRoute;

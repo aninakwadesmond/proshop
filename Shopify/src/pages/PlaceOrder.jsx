@@ -128,7 +128,7 @@ function PlaceOrder() {
           <p className="flex items-center justify-between   w-[20rem]  p-2 border-b-[0.5px] border-zinc-300/50">
             <span className="font-semibold text-lg text-gray-500">Total:</span>
             <span className="font-semibold tracking-normal text-lg  text-gray-600">
-              $ {totalCost}
+              $ {Number(totalCost).toFixed(2)}
             </span>
           </p>
           <p className="flex items-center justify-between   w-full  p-2 border-b-[0.5px] border-zinc-300/50 h-10">
@@ -175,7 +175,8 @@ function Cart({ cart }) {
         </p>
       </div>
       <p className="text-md text-gray-600 tracking-normal font-semibold">
-        {quantity} X {price} = ${quantity * price}
+        {quantity} X {Number(price).toFixed(2)} = $
+        {Number(quantity * price).toFixed(2)}
       </p>
     </div>
   );

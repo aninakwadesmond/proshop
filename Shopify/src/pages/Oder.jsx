@@ -134,7 +134,9 @@ function Oder() {
                   : {}
               }
             >
-              {!isDeliverd ? ' Not Delivered' : `Delivered on ${updatedAt}`}
+              {!orders.isDeliverd
+                ? ' Not Delivered'
+                : `Delivered on ${updatedAt}`}
             </p>
           </div>
         </div>
