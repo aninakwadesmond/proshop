@@ -180,7 +180,7 @@ function Navigation() {
                 </div>
               )}
             </button>
-            {userInfo && userInfo.isAdmin !== 'false' && (
+            {userInfo && userInfo.isAdmin && (
               <div className="flex flex-col items-center justify-start relative">
                 <div
                   className="flex items-center justify-start gap-1 cursor-pointer"
