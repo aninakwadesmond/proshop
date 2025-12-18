@@ -185,7 +185,7 @@ router.delete('/delete/:id', authLogin, authAdmin, async (req, res) => {
     .json({ message: 'Successfully delected', status: 200, data });
 });
 
-router.post('/reviews/:id', authLogin, authAdmin, async (req, res) => {
+router.post('/reviews/:id', authLogin, async (req, res) => {
   console.log('your respods', res.user);
   const { rating, comment } = req.body;
   const { id } = req.params;
