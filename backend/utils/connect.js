@@ -11,8 +11,7 @@ module.exports = async function () {
       )
       .then(() => {
         importData();
-
-        console.log('Connected to the db ');
+        console.log('Connected to the db 2 ');
       })
       .catch((err) => console.log(err, err.message))
   );
