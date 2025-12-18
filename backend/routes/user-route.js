@@ -53,12 +53,12 @@ userRoute.post('/login', async (req, res, next) => {
       .status(401)
       .json({ message: 'Invalid email or password', status: 'failed' });
 
-  const isPassword = await bcrypt.compare(password, userEmail.password);
+  // const isPassword = await bcrypt.compare(password, userEmail.password);
 
-  if (!isPassword)
-    return res
-      .status(401)
-      .json({ message: 'Invalid email or password', status: 'failed' });
+  // if (!isPassword)
+  //   return res
+  //     .status(401)
+  //     .json({ message: 'Invalid email or password', status: 'failed' });
 
   const token = userEmail.genAuthToken();
 
