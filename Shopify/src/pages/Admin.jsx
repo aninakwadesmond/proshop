@@ -19,7 +19,7 @@ function Admin() {
         Orders
       </h1>
       <div className="overflow-x-auto w-full ">
-        <table className=" border-collapse min-w-max">
+        <table className=" border-collapse w-full">
           <thead className="w-full  [&_th]:p-1  ">
             <th>ID</th>
             <th>USER</th>

@@ -82,7 +82,11 @@ function Cart({ card }) {
       {!upload ? (
         <img src={image} alt="no Image found" className="w-full " />
       ) : (
-        <img src={`https://proshop-8-4qyi.onrender.com${image}`} alt="image" />
+        <img
+          src={`https://proshop-8-4qyi.onrender.com${image}`}
+          alt="image"
+          className="w-full "
+        />
       )}
 
       <h2 className="font-bold text-sm line-clamp-1 text-zinc-600">{name}</h2>
