@@ -13,9 +13,9 @@ async function importData() {
     await Products.deleteMany();
     await User.deleteMany();
 
-    const allUsers = user.map(async (el) => {
-      const salt = await bcrypt.genSalt(10);
-      const passcode = await bcrypt.hash(el.password, salt);
+    const allUsers = user.map((el) => {
+      const salt = bcrypt.genSaltSync(10);
+      const passcode = bcrypt.hashSync(el.password, salt);
       return (el.password = passcode);
     });
     const users = await User.insertMany(allUsers);
