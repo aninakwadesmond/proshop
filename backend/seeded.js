@@ -14,7 +14,7 @@ async function importData() {
     await User.deleteMany();
 
     const allUsers = user.map((el) => {
-      const salt = bcrypt.genSaltSync(10);
+      const salt = bcrypt.genSalt(10);
       const passcode = bcrypt.hashSync(el.password, salt);
       return (el.password = passcode);
     });
